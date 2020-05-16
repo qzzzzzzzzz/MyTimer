@@ -56,12 +56,12 @@ do
 	declare -i tdrawn=$(( RANDOM % ( $inRange + 1) + $inMean ))
 	declare -i tsaved=$(( $tdrawn / $inRate ))
 
-	#ttimer $timedrawn
+	ttimer $tdrawn
 
 	# ... sound feedback
-	#printf \\a 					# 'duang' sound
-	#say -v Kyoko おめでと う		# say -v \? for a list of voices
-	#say -v Ting-Ting 完成啦！休息，休息一下
+	printf \\a 			# 'duang' sound
+	say -v Kyoko おめでと う	     
+	#say -v Ting-Ting 完成啦！休息，休息一下	# say -v \? for a list of voices
 
 	# ... update and record time to log
 	declare -i nTimer=$[ $nTimer + 1 ]
